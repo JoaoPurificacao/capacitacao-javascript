@@ -17,13 +17,24 @@ let palavra = "praxis" //String
 let verdadeiro = true //Boolean
 let falso = false //Boolean
 
-console.log(palavra)
-console.log(verdadeiro)
-console.log(falso)
+// console.log(palavra)
+// console.log(verdadeiro)
+// console.log(falso)
 
 let casa = [] //array
 let andar4 = [123, 321, 213];
 andar4[3] = 456
 
-console.log(andar4[3])
+// console.log(andar4[3])
 
+// == é igual
+// != é diferente
+// >= é maior que igual
+// <= menor que igual
+
+let condicao = x + y >= 10
+console.log(condicao)
+
+if(condicao){
+    console.log("João")
+}
