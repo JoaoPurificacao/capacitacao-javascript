@@ -20,3 +20,36 @@ novoInput.setAttribute('placeholder', 'CPF')
 novoInput.setAttribute('id', 'input-novo')
 div[0].appendChild(novoInput)
 
+let inputCPF = document.getElementById('input-novo')
+
+inputCPF.addEventListener('input', mascaraCPF)
+
+function mascaraCPF(){
+    let numerosCPF = inputCPF.value
+    let arrayCPF = []
+    if(numerosCPF.length == 11 && numerosCPF.indexOf('.') == -1){
+       for(let i = 0; i < 11; i++){
+            if(i == 2 || i==5){
+                arrayCPF.push(numerosCPF[i])
+                arrayCPF.push('.')
+            }else if(i == 8){
+                arrayCPF.push(numerosCPF[i])
+                arrayCPF.push('-')
+            }
+            else{
+                arrayCPF.push(numerosCPF[i])
+            }
+       }
+        inputCPF.value = arrayCPF.join('')
+    }else if(numerosCPF.indexOf('.') != -1){
+        let x = 0
+        while(numerosCPF.indexOf('.') != -1 && x <=3){
+
+            numerosCPF = numerosCPF.replace('.','');
+            numerosCPF = numerosCPF.replace('-','')
+
+            inputCPF.value = numerosCPF
+            x++
+        }
+    }
+}
