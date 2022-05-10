@@ -71,9 +71,7 @@ let condicaoDiferente = nota > 8
 
 function Soma (x, y){
     let soma = x + y
-    console.log(typeof x)
-    console.log(typeof y)    
-    console.log(soma);
+    return soma
 }
 
 // Soma(100, 200)
@@ -82,12 +80,14 @@ function Soma (x, y){
 
 let numero =  "10" + 10
 
+numero = Soma(20,30);
+console.log(numero)
+
 
 // Soma("João", "Daniel")
 // Soma(nota, z)
 // Soma(nota, nome)
 
-console.log(numero)
-console.log(typeof numero)
+// console.log(typeof numero)
 // console.log(typeof nome)
 
