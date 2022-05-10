@@ -2,5 +2,6 @@ body{
     align-items: center;
     background-color: gray;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
 }
